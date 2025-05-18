@@ -1,2 +1,2 @@
 # KGDS
-Corpus for the paper: "What are they talking about? Benchmarking Large Language Models for Knowledge-Grounded Discussion Summarization"
+*The data is being organized, and we will release it within one month.*
