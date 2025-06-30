@@ -11,4 +11,4 @@ The `KGDS.json` file contains several fields, each representing a crucial compon
 6. **BNPAF**: Atomic facts from background-nonsupporting paragraphs. Facts labeled with a `type` of `0` are **Background-Nonsupporting Atomic Facts**.
 
 ## Upcoming Updates
-*We will release evaluation code along with the outputs from 12 LLMs in the next 2-3 weeks.*
+*We are updating the evaluation code along with the outputs of the latest LLM versions. Please wait.*
