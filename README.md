@@ -1,14 +1,18 @@
 # KGDS
-Now you can find our dataset at `benchmark/KGDS.json`.
+**Knowledge-Grounded Discussion Summarization (KGDS)** is a novel task designed to produce a **supplementary background summary** and a **clear opinion summary** by integrating shared background knowledge with the discussion content. The goal is to create reader-centered summaries by bridging knowledge gaps with necessary background-supporting information and presenting clear participant opinions with clarified implicit references.
 
-## Benchmark Overview
-The `KGDS.json` file contains several fields, each representing a crucial component of our dataset:
-1. **SBK**: Shared Background Knowledge.
-2. **KGD**: Knowledge-Grounded Discussion.
-3. **BSP**: Background-Supporting Paragraphs.
-4. **CAO**: Clear Atomic Opinions.
-5. **BSPAF**: Atomic facts from background-supporting paragraphs. Facts labeled with a `type` of `1` are **Key Background-Supporting Atomic Facts**.
-6. **BNPAF**: Atomic facts from background-nonsupporting paragraphs. Facts labeled with a `type` of `0` are **Background-Nonsupporting Atomic Facts**.
+![](./figures/task_formulation.png)
 
-## Upcoming Updates
-*We are updating the evaluation code along with the outputs of the latest LLM versions. Please wait.*
+## Benchmark Dataset
+The official dataset is available at `benchmark/KGDS.json`. The file contains a list of JSON objects, where each object has the following fields:
++ `SBK`: **Shared Background Knowledge** (news domain).
++ `KGD`: **Knowledge-Grounded Discussion**.
++ `BSP`: **Background-Supporting Paragraphs**.
++ `CAO`: **Clear Atomic Opinions**.
++ `BSPAF`: Background-Supporting Paragraph Atomic Facts. Those annotated with `"type": 1` are **Key Background-Supporting Atomic Facts**.
++ `BNPAF`: Background-Nonsupporting Paragraph Atomic Facts. Those labeled with `"type": 0` are **Background-Nonsupporting Atomic Facts**.
+
+## Evaluation Framework
+Our evaluation framework provides a comprehensive and hierarchical assessment of the generated summaries. It independently evaluates the sub-summaries (background and opinion) using fine-grained, interpretable metrics and then aggregates these scores to determine the overall quality at the paradigm level.
+
+![](./figures/evaluation_framework.png)
