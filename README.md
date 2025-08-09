@@ -44,3 +44,19 @@ python errors.py --paradigm abs-aos --model claude-3.5-sonnet --prompt structure
 # Example 3: abs-aos paradigm with qwen-max and self-reflection prompt
 python errors.py --paradigm abs-aos --model qwen-max --prompt self-reflection
 ```
+
+## 🤝 Support
+If you have any questions, please feel free to reach out:
+* **Email**: [wxzhou@buaa.edu.cn](mailto:wxzhou@buaa.edu.cn)
+* **GitHub Issues**: Submit your questions or feedback on the issues page of this repository.
+
+## ✍️ Citation
+If you find this work useful and have used the code or data, please cite the following paper:
+```bibtex
+@article{zhou2025they,
+  title={What are they talking about? Benchmarking Large Language Models for Knowledge-Grounded Discussion Summarization},
+  author={Zhou, Weixiao and Zhu, Junnan and Li, Gengyao and Cheng, Xianfu and Liang, Xinnian and Zhai, Feifei and Li, Zhoujun},
+  journal={arXiv preprint arXiv:2505.12474},
+  year={2025}
+}
+```
