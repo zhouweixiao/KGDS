@@ -17,6 +17,30 @@ Our evaluation framework provides a comprehensive and hierarchical assessment of
 
 ![The hierarchical evaluation framework for KGDS.](./figures/evaluation_framework.png)
 
-🚀 *Now, you can reproduce the results reported in our paper by following the steps below:*
+🚀 *Now, you can reproduce the automatic evaluation results reported in our paper by following the steps below:*
 
 **Step 1:** Download the `outputs.zip` file from either [**Baidu Netdisk**](https://pan.baidu.com/s/1uPcbjQcOQmnEKfpXFBFMXw?pwd=a8x9) (Password: `a8x9`) or [**Google Drive**](https://drive.google.com/file/d/1UcYQ6ZyNq1i1QDI7iSKsscuHR4AHiU4N/view?usp=share_link) and unzip it into the root directory of this project.
+
+**Step 2:** Run the `paradigms.py` script. You can specify the task paradigm, the LLM (from a selection of 12), and the prompt pattern.
+```bash
+# Example 1: ebs-aos paradigm with gpt-4o
+python paradigms.py --paradigm ebs-aos --model gpt-4o --prompt structured-prompt
+
+# Example 2: abs-aos paradigm with gpt-4o-mini
+python paradigms.py --paradigm abs-aos --model gpt-4o-mini --prompt structured-prompt
+
+# Example 3: abs-aos paradigm with deepseek-v3 and self-reflection prompt
+python paradigms.py --paradigm abs-aos --model deepseek-v3 --prompt self-reflection
+```
+
+**Step 3:** Run the `errors.py` script. The options for task paradigm, LLM, and prompt pattern are the same as in the previous step.
+```bash
+# Example 1: ebs-aos paradigm with llama-3.1-405b
+python errors.py --paradigm ebs-aos --model llama-3.1-405b --prompt structured-prompt
+
+# Example 2: abs-aos paradigm with claude-3.5-sonnet
+python errors.py --paradigm abs-aos --model claude-3.5-sonnet --prompt structured-prompt
+
+# Example 3: abs-aos paradigm with qwen-max and self-reflection prompt
+python errors.py --paradigm abs-aos --model qwen-max --prompt self-reflection
+```
